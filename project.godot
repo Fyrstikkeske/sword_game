@@ -46,6 +46,10 @@ down={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="enemy"
+
 [rendering]
 
 renderer/rendering_method="mobile"

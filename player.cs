@@ -4,7 +4,7 @@ using System;
 public partial class player : CharacterBody2D
 {
 	
-	Vector2 Speed = new Vector2(100,100);
+	Vector2 Speed = new Vector2(130,130);
 	
 	void Movement(){
 		Vector2 inputDirection = Input.GetVector("left", "right", "up", "down");
