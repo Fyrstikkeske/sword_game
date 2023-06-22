@@ -1,8 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://baegpux08pjvh"]
+[gd_scene load_steps=5 format=3 uid="uid://baegpux08pjvh"]
 
 [ext_resource type="Script" path="res://player.cs" id="1_583lw"]
-[ext_resource type="Texture2D" uid="uid://cjyo1cqty1gy8" path="res://icon.svg" id="1_glqo6"]
+[ext_resource type="Texture2D" uid="uid://c8bs6e0ejjs21" path="res://Player.png" id="2_2sx4y"]
+[ext_resource type="PackedScene" uid="uid://b6w1gd4wxqbi0" path="res://sword.tscn" id="3_yra4q"]
 
-[node name="Player" type="Sprite2D"]
-texture = ExtResource("1_glqo6")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bp2la"]
+size = Vector2(14, 25)
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(4, 4)
 script = ExtResource("1_583lw")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_2sx4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_bp2la")
+
+[node name="sword" parent="." instance=ExtResource("3_yra4q")]
+position = Vector2(31.75, 0)
