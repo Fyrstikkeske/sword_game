@@ -22,3 +22,18 @@ shape = SubResource("RectangleShape2D_bp2la")
 
 [node name="sword" parent="." instance=ExtResource("3_yra4q")]
 position = Vector2(31.75, 0)
+
+[node name="zombiechecker" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zombiechecker"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_bp2la")
+
+[node name="Restart_Button" type="Button" parent="."]
+process_mode = 3
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="area_entered" from="zombiechecker" to="." method="_on_zombiechecker_area_entered"]
+[connection signal="button_down" from="Restart_Button" to="." method="_on_restart_button_button_down"]
