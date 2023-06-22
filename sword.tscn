@@ -1,7 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6w1gd4wxqbi0"]
+[gd_scene load_steps=3 format=3 uid="uid://b6w1gd4wxqbi0"]
 
 [ext_resource type="Texture2D" uid="uid://cc3py4gfkmvsm" path="res://sword.png" id="1_aom1f"]
+[ext_resource type="Script" path="res://sword.cs" id="2_toryu"]
 
 [node name="sword" type="Sprite2D"]
 texture_filter = 1
 texture = ExtResource("1_aom1f")
+script = ExtResource("2_toryu")
