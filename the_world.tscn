@@ -10,7 +10,14 @@ script = ExtResource("1_dypj8")
 position = Vector2(535, 348)
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 0.05
 autostart = true
+
+[node name="Show_Coins" type="RichTextLabel" parent="."]
+offset_left = 536.0
+offset_top = 51.0
+offset_right = 576.0
+offset_bottom = 91.0
+text = "0"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -4,6 +4,8 @@ using System;
 public partial class enemy : CharacterBody2D
 {
 	
+	Godot.RichTextLabel Coins;
+	
 	Godot.CharacterBody2D target;
 	
 	Vector2 speed = new Vector2(120,120);
@@ -12,6 +14,10 @@ public partial class enemy : CharacterBody2D
 	
 	private void _on_area_2d_area_entered(Area2D area)
 	{
+		Coins = this.GetParent().GetNode<Godot.RichTextLabel>("Show_Coins");
+		
+		Coins.Text = (Int32.Parse(Coins.Text) + 1).ToString();
+		
 		this.QueueFree();
 	}
 	

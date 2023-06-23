@@ -23,6 +23,10 @@ shape = SubResource("RectangleShape2D_bp2la")
 [node name="sword" parent="." instance=ExtResource("3_yra4q")]
 position = Vector2(31.75, 0)
 
+[node name="sword" parent="sword" instance=ExtResource("3_yra4q")]
+
+[node name="sword" parent="sword/sword" instance=ExtResource("3_yra4q")]
+
 [node name="zombiechecker" type="Area2D" parent="."]
 collision_layer = 0
 

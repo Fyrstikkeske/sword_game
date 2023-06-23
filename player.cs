@@ -4,6 +4,7 @@ using System;
 public partial class player : CharacterBody2D
 {
 	
+	
 	Vector2 Speed = new Vector2(130,130);
 	
 	
@@ -39,8 +40,3 @@ public partial class player : CharacterBody2D
 		MoveAndSlide();
 	}
 }
-
-
-
-
-

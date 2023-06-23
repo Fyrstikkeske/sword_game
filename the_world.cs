@@ -5,7 +5,6 @@ public partial class the_world : Node2D
 {
 	dynamic preloadenemy;
 	
-	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
@@ -16,6 +15,7 @@ public partial class the_world : Node2D
 	{
 		SpawnEnemy();
 	}
+	
 	
 	
 	void SpawnEnemy(){
