@@ -32,8 +32,11 @@ shape = SubResource("RectangleShape2D_bp2la")
 
 [node name="Restart_Button" type="Button" parent="."]
 process_mode = 3
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
+disabled = true
+text = "Restart?"
 
 [connection signal="area_entered" from="zombiechecker" to="." method="_on_zombiechecker_area_entered"]
 [connection signal="button_down" from="Restart_Button" to="." method="_on_restart_button_button_down"]
